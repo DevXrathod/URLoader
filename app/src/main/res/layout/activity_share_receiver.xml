@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrimRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/scrim">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardSheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/sheet_floating_margin"
+        android:layout_marginBottom="@dimen/sheet_floating_margin"
+        android:outlineAmbientShadowColor="@color/black"
+        android:outlineSpotShadowColor="@color/gemini_gradient_start"
+        app:cardBackgroundColor="@color/background"
+        app:cardCornerRadius="@dimen/corner_radius_xl"
+        app:cardElevation="@dimen/card_elevation_floating"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="@dimen/sheet_max_width"
+        app:strokeColor="@color/gemini_stroke_mid"
+        app:strokeWidth="1.5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.dev.urloader.core.ui.BlurMeshBackgroundView
+                android:id="@+id/blurMeshBackground"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:enableDepthScrims="false"
+                app:layout_constraintBottom_toBottomOf="@id/contentContainer"
+                app:layout_constraintEnd_toEndOf="@id/contentContainer"
+                app:layout_constraintStart_toStartOf="@id/contentContainer"
+                app:layout_constraintTop_toTopOf="@id/contentContainer" />
+
+            <LinearLayout
+                android:id="@+id/contentContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="@dimen/spacing_lg"
+                android:paddingTop="@dimen/spacing_md"
+                android:paddingBottom="@dimen/spacing_lg"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <!-- Centered frosted drag handle -->
+                <View
+                    android:layout_width="@dimen/sheet_handle_width"
+                    android:layout_height="@dimen/sheet_handle_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/spacing_md"
+                    android:background="@drawable/bg_sheet_handle" />
+
+                <!-- Title & Dismiss Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvHeaderTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-medium"
+                        android:letterSpacing="-0.02"
+                        android:text="@string/share_title"
+                        android:textColor="@color/on_surface"
+                        android:textSize="@dimen/text_headline" />
+
+                    <ImageButton
+                        android:id="@+id/btnClose"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/share_btn_cancel"
+                        android:src="@drawable/ic_close"
+                        app:tint="@color/on_surface_variant" />
+                </LinearLayout>
+
+                <!-- Detected Source Badge -->
+                <TextView
+                    android:id="@+id/tvPlatformBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_sm"
+                    android:background="@drawable/bg_badge"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="@dimen/text_caption"
+                    tools:text="YouTube" />
+
+                <!-- Frosted Inset URL Container -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_md"
+                    android:layout_marginBottom="@dimen/spacing_lg"
+                    android:background="@drawable/bg_sheet_preview"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/spacing_md">
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_size_md"
+                        android:layout_height="@dimen/icon_size_md"
+                        android:layout_marginEnd="@dimen/spacing_sm"
+                        android:contentDescription="@string/share_clean_url_label"
+                        android:src="@drawable/ic_link"
+                        app:tint="@color/on_surface_variant" />
+
+                    <TextView
+                        android:id="@+id/tvUrlPreview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="middle"
+                        android:maxLines="2"
+                        android:textAppearance="@style/Text.Muted"
+                        android:textColor="@color/on_surface"
+                        tools:text="https://youtu.be/dQw4w9WgXcQ" />
+
+                    <ImageButton
+                        android:id="@+id/btnCopyUrl"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/share_btn_copy"
+                        android:src="@drawable/ic_content_copy"
+                        app:tint="@color/on_surface_variant" />
+                </LinearLayout>
+
+                <!-- Primary Video Action CTA -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDownloadVideo"
+                    style="@style/Widget.URLoader.Button.Gradient"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginBottom="@dimen/spacing_sm"
+                    android:text="@string/share_btn_download_video"
+                    app:icon="@drawable/ic_download"
+                    app:iconGravity="textStart"
+                    app:iconPadding="@dimen/spacing_sm"
+                    app:iconTint="@color/white" />
+
+                <!-- Secondary Audio Action CTA -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDownloadAudio"
+                    style="@style/Widget.URLoader.Button.Soft"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:text="@string/share_btn_download_audio"
+                    app:icon="@drawable/ic_headphones"
+                    app:iconGravity="textStart"
+                    app:iconPadding="@dimen/spacing_sm"
+                    app:iconTint="@color/on_surface" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

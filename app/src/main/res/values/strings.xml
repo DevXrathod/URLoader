@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">URLoader</string>
+    <string name="app_tagline">Save anything</string>
+    <string name="app_description">Drop a link. Get the original file.</string>
+
+    <string name="platform_youtube">YouTube</string>
+    <string name="platform_instagram">Instagram</string>
+    <string name="platform_tiktok">TikTok</string>
+    <string name="platform_twitter">X</string>
+    <string name="platform_reddit">Reddit</string>
+    <string name="platform_generic">Web</string>
+
+    <string name="share_title">Save this</string>
+    <string name="share_detected_platform">%1$s</string>
+    <string name="share_clean_url_label">Link</string>
+    <string name="share_btn_download_video">Video</string>
+    <string name="share_btn_download_audio">Audio</string>
+    <string name="share_btn_copy">Copy</string>
+    <string name="share_btn_cancel">Close</string>
+    <string name="share_status_preparing">Preparing…</string>
+    <string name="share_status_started">Download started</string>
+    <string name="share_status_failed">Couldn’t start download</string>
+    <string name="share_copied_toast">Link copied</string>
+    <string name="share_no_url_found">No valid link found</string>
+
+    <string name="home_header_title">URLoader</string>
+    <string name="home_header_subtitle">Save the original</string>
+    <string name="home_permission_title">Stay in the loop</string>
+    <string name="home_permission_description">Progress lives in your status bar.</string>
+    <string name="home_permission_btn">Allow</string>
+    <string name="home_permission_granted">Notifications enabled</string>
+    <string name="home_test_card_title">Paste a link</string>
+    <string name="home_test_card_subtitle">YouTube, Instagram, TikTok, or anywhere.</string>
+    <string name="home_test_input_hint">Paste a link</string>
+    <string name="home_test_btn_paste">Paste</string>
+    <string name="home_test_btn_download">Download</string>
+    <string name="home_test_btn_audio">Audio only</string>
+    <string name="home_paste_clipboard">Use copied link</string>
+    <string name="home_guide_title">From any app</string>
+    <string name="home_guide_step1_title">Share</string>
+    <string name="home_guide_step1_desc">Open a video anywhere.</string>
+    <string name="home_guide_step2_title">Send</string>
+    <string name="home_guide_step2_desc">Share it to URLoader.</string>
+    <string name="home_guide_step3_title">Saved</string>
+    <string name="home_guide_step3_desc">It lands in Downloads.</string>
+    <string name="home_recent_title">Library</string>
+    <string name="home_recent_empty">Nothing yet. Drop a link above.</string>
+
+    <string name="notification_channel_name">Downloads</string>
+    <string name="notification_channel_desc">Live progress for saves</string>
+    <string name="notification_downloading">Saving %1$s…</string>
+    <string name="notification_complete">Saved %1$s</string>
+    <string name="notification_failed">Couldn’t save</string>
+    <string name="notification_download_preparing">Finding the best stream…</string>
+    <string name="notification_download_progress">%1$d%% · %2$ds</string>
+    <string name="notification_download_saved_to">Downloads/URLoader</string>
+    <string name="notification_download_updating_engine">Updating download engine…</string>
+
+    <string name="home_engine_title">Download engine</string>
+    <string name="home_engine_version">v%1$s</string>
+    <string name="home_engine_updating">Updating…</string>
+    <string name="home_engine_updated">Download engine updated</string>
+    <string name="home_engine_already_latest">Already up to date</string>
+    <string name="home_engine_btn_update">Update</string>
+
+    <string name="live_activity_title">Saving</string>
+    <string name="live_activity_status">%1$s · %2$d%% (%3$ds)</string>
+    <string name="live_activity_cancel">Stop</string>
+
+    <string name="home_file_not_found">File not found in storage</string>
+    <string name="home_cannot_open_file">No app found to open this media</string>
+</resources>

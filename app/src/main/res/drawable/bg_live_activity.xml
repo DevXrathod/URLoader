@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Active Gemini gradient energy border -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/corner_radius_lg" />
+            <gradient
+                android:angle="0"
+                android:startColor="@color/gemini_stroke_start"
+                android:centerColor="@color/gemini_stroke_mid"
+                android:endColor="@color/gemini_stroke_end"
+                android:type="linear" />
+        </shape>
+    </item>
+    <item
+        android:bottom="@dimen/card_stroke_gemini"
+        android:left="@dimen/card_stroke_gemini"
+        android:right="@dimen/card_stroke_gemini"
+        android:top="@dimen/card_stroke_gemini">
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/composer_inner_corner_radius" />
+            <solid android:color="@color/surface" />
+        </shape>
+    </item>
+</layer-list>

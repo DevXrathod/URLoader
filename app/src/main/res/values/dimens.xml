@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_2xs">2dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_lg">24dp</dimen>
+    <dimen name="spacing_xl">32dp</dimen>
+    <dimen name="spacing_2xl">48dp</dimen>
+    <dimen name="spacing_3xl">64dp</dimen>
+
+    <dimen name="corner_radius_sm">10dp</dimen>
+    <dimen name="corner_radius_md">18dp</dimen>
+    <dimen name="corner_radius_lg">28dp</dimen>
+    <dimen name="corner_radius_xl">32dp</dimen>
+    <dimen name="corner_radius_full">999dp</dimen>
+
+    <dimen name="sheet_floating_margin">20dp</dimen>
+    <dimen name="sheet_handle_width">36dp</dimen>
+    <dimen name="sheet_handle_height">4dp</dimen>
+    <dimen name="card_elevation_floating">16dp</dimen>
+
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="icon_size_sm">18dp</dimen>
+    <dimen name="icon_size_md">24dp</dimen>
+    <dimen name="icon_size_lg">36dp</dimen>
+    <dimen name="icon_size_xl">48dp</dimen>
+    <dimen name="mark_size">40dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+    <dimen name="card_stroke_width">0dp</dimen>
+    <dimen name="card_stroke_gemini">1.5dp</dimen>
+    <dimen name="composer_inner_corner_radius">26.5dp</dimen>
+    <dimen name="sheet_max_width">480dp</dimen>
+    <dimen name="content_max_width">560dp</dimen>
+    <dimen name="composer_min_height">120dp</dimen>
+
+    <dimen name="text_caption">12sp</dimen>
+    <dimen name="text_body_sm">14sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_title">18sp</dimen>
+    <dimen name="text_headline">28sp</dimen>
+    <dimen name="text_display">36sp</dimen>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Deep Space OLED Canvas -->
+    <color name="background">#000000</color>
+    <color name="on_background">#FFFFFF</color>
+    <color name="surface">#CC080D1A</color>
+    <color name="on_surface">#FFFFFF</color>
+    <color name="surface_variant">#E60F1726</color>
+    <color name="on_surface_variant">#94A3B8</color>
+    <color name="outline">#1E293B</color>
+    <color name="outline_variant">#334155</color>
+
+    <color name="primary">#387BFF</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#1A2B56</color>
+    <color name="on_primary_container">#D8E2FF</color>
+
+    <color name="secondary">#9055FF</color>
+    <color name="on_secondary">#FFFFFF</color>
+    <color name="secondary_container">#301B54</color>
+    <color name="on_secondary_container">#E8DDFF</color>
+
+    <color name="tertiary">#FF3366</color>
+    <color name="on_tertiary">#FFFFFF</color>
+
+    <color name="error">#FF4D4D</color>
+    <color name="on_error">#FFFFFF</color>
+    <color name="error_container">#4A0F12</color>
+
+    <color name="success">#00E5A3</color>
+    <color name="success_container">#0A3828</color>
+
+    <color name="scrim">#66000000</color>
+    <color name="sheet_background">#D90F1728</color>
+    <color name="sheet_glass_surface">#D90F1728</color>
+    <color name="glass_stroke">#33FFFFFF</color>
+    <color name="sheet_handle">#55FFFFFF</color>
+    <color name="sheet_preview_bg">#40000000</color>
+    <color name="sheet_preview_stroke">#25FFFFFF</color>
+    <color name="mark_fill">#181824</color>
+    <color name="mark_on">#FFFFFF</color>
+
+    <!-- Neon Contrasty Badges -->
+    <color name="badge_youtube_bg">#2E0B10</color>
+    <color name="badge_youtube_text">#FF4D61</color>
+    <color name="badge_instagram_bg">#2E0827</color>
+    <color name="badge_instagram_text">#FF3DA4</color>
+    <color name="badge_tiktok_bg">#052331</color>
+    <color name="badge_tiktok_text">#00E5FF</color>
+    <color name="badge_twitter_bg">#181824</color>
+    <color name="badge_twitter_text">#FFFFFF</color>
+    <color name="badge_reddit_bg">#311406</color>
+    <color name="badge_reddit_text">#FF6422</color>
+    <color name="badge_generic_bg">#181824</color>
+    <color name="badge_generic_text">#94A3B8</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Dribbble Electric Blue & Cyan Gradient Palette -->
+    <color name="gemini_gradient_start">#1D4ED8</color>
+    <color name="gemini_gradient_middle">#2563EB</color>
+    <color name="gemini_gradient_end">#00F5D4</color>
+    <color name="gemini_gradient_cyan">#00F5D4</color>
+
+    <!-- Luminous Blue & Cyan Glow Strokes -->
+    <color name="gemini_stroke_start">#802563EB</color>
+    <color name="gemini_stroke_mid">#6006B6D4</color>
+    <color name="gemini_stroke_end">#6000F5D4</color>
+    <color name="gemini_aura_top">#301D4ED8</color>
+    <color name="gemini_aura_bottom">#1800F5D4</color>
+    <color name="gemini_track_bg">#33141D2E</color>
+
+    <!-- Ambient Aurora Gradient Frames -->
+    <color name="aurora_frame1_start">#1E2260</color>
+    <color name="aurora_frame1_mid">#0F3864</color>
+    <color name="aurora_frame2_start">#08486A</color>
+    <color name="aurora_frame2_mid">#1A255E</color>
+    <color name="aurora_frame3_start">#0B5060</color>
+    <color name="aurora_frame3_mid">#1E2866</color>
+    <color name="aurora_frame4_start">#093860</color>
+    <color name="aurora_frame4_mid">#0A4268</color>
+
+    <!-- Mesh Blur Orbs -->
+    <color name="mesh_blue_primary">#1D4ED8</color>
+    <color name="mesh_blue_secondary">#2563EB</color>
+    <color name="mesh_cyan_neon">#00F5D4</color>
+    <color name="mesh_teal_neon">#06B6D4</color>
+    <color name="mesh_indigo_depth">#4F46E5</color>
+    <color name="mesh_violet_neon">#7C3AED</color>
+    <color name="mesh_sky_neon">#38BDF8</color>
+</resources>
