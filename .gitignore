@@ -3,6 +3,7 @@
 /local.properties
 .idea/
 .kotlin/
+.agents/
 .DS_Store
 /build
 */build
