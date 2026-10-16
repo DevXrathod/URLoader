@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/DevXrathod/URLoader/actions/workflows/ci.yml">
+    <img src="https://github.com/DevXrathod/URLoader/actions/workflows/ci.yml/badge.svg" alt="CI Status" />
+  </a>
   <img src="https://img.shields.io/badge/Platform-Android%2016%20(SDK%2036)-3DDC84?style=flat-square&logo=android&logoColor=white" alt="Android 16" />
   <img src="https://img.shields.io/badge/Kotlin-2.0+-7F52FF?style=flat-square&logo=kotlin&logoColor=white" alt="Kotlin" />
   <img src="https://img.shields.io/badge/Engine-yt--dlp%20%2B%20FFmpeg-FF0000?style=flat-square&logo=youtube&logoColor=white" alt="Engine" />
@@ -80,7 +83,7 @@ com.dev.urloader/
 ### Build from Terminal
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/URLoader.git
+git clone https://github.com/DevXrathod/URLoader.git
 cd URLoader
 
 # Run Unit Tests
