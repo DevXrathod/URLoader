@@ -5,10 +5,12 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
@@ -33,7 +35,10 @@ class ShareReceiverActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(Color.TRANSPARENT)
+        )
 
         // Enable real-time background blur on Android 12+ (SDK 31-36) for liquid glass effect
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {

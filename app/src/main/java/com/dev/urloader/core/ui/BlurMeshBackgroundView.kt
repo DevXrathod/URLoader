@@ -166,6 +166,7 @@ class BlurMeshBackgroundView @JvmOverloads constructor(
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         super.onSizeChanged(w, h, oldw, oldh)
         rebuildShaders(w, h)
+        invalidate()
     }
 
     private fun rebuildShaders(w: Int, h: Int) {

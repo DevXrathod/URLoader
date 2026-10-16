@@ -5,11 +5,13 @@ import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
 import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.os.Environment
 import android.view.View
 import android.widget.Toast
+import androidx.activity.SystemBarStyle
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -55,7 +57,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        enableEdgeToEdge(
+            statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
+            navigationBarStyle = SystemBarStyle.dark(Color.TRANSPARENT)
+        )
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -184,14 +189,18 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun refreshEngineVersion() {
-        val version = try {
-            YoutubeDL.getInstance().version(applicationContext)
-        } catch (_: Exception) {
-            null
-        }
+        lifecycleScope.launch(Dispatchers.IO) {
+            val version = try {
+                YoutubeDL.getInstance().version(applicationContext)
+            } catch (_: Exception) {
+                null
+            }
 
-        if (!version.isNullOrBlank()) {
-            binding.tvEngineVersion.text = getString(R.string.home_engine_version, version)
+            if (!version.isNullOrBlank()) {
+                withContext(Dispatchers.Main) {
+                    binding.tvEngineVersion.text = getString(R.string.home_engine_version, version)
+                }
+            }
         }
     }
 
