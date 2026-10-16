@@ -15,11 +15,20 @@ android {
         minSdk = 24
         targetSdk = 36
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.0.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
-            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a", "x86_64", "x86"))
+            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a", "x86_64"))
+        }
+    }
+
+    splits {
+        abi {
+            isEnable = true
+            reset()
+            include("arm64-v8a", "armeabi-v7a", "x86_64")
+            isUniversalApk = true
         }
     }
 
@@ -64,4 +73,28 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+}
+
+tasks.register("renameReleaseApks") {
+    doLast {
+        val releaseDir = layout.buildDirectory.dir("outputs/apk/release").get().asFile
+        val version = android.defaultConfig.versionName ?: "1.0.0"
+        releaseDir.listFiles { _, name -> name.endsWith(".apk") && name.startsWith("app-") }?.forEach { file ->
+            val abi = when {
+                file.name.contains("arm64-v8a") -> "arm64-v8a"
+                file.name.contains("armeabi-v7a") -> "armeabi-v7a"
+                file.name.contains("x86_64") -> "x86_64"
+                file.name.contains("universal") -> "universal"
+                else -> null
+            }
+            if (abi != null) {
+                val targetFile = File(releaseDir, "URLoader_v${version}_${abi}.apk")
+                file.copyTo(targetFile, overwrite = true)
+            }
+        }
+    }
+}
+
+tasks.matching { it.name == "assembleRelease" }.configureEach {
+    finalizedBy("renameReleaseApks")
 }
