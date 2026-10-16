@@ -3,6 +3,10 @@ package com.dev.urloader.core.common
 import java.net.URI
 import java.util.regex.Pattern
 
+/**
+ * High-performance URL extractor and privacy sanitizer.
+ * Scans raw text blocks for HTTP/HTTPS web links and strips common tracking/analytics parameters.
+ */
 object UrlExtractor {
 
     private val WEB_URL_PATTERN: Pattern = Pattern.compile(

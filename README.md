@@ -113,6 +113,14 @@ Run the test suite with:
 
 ---
 
+## 🤝 Contributing
+
+Contributions are welcome! Please check out [CONTRIBUTING.md](.github/CONTRIBUTING.md) for local development setup, coding guidelines, and pull request procedures.
+
+For security concerns, please refer to our [Security Policy](.github/SECURITY.md).
+
+---
+
 ## ⚖️ Disclaimer & License
 
 This project is intended strictly for personal archiving and educational purposes. Ensure you comply with the terms of service of any host platform and respect copyright laws.

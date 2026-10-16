@@ -12,6 +12,10 @@ import kotlinx.coroutines.launch
 
 private const val TAG = "URLoaderApp"
 
+/**
+ * URLoader Application class.
+ * Handles background engine initialization and proactive yt-dlp nightly update checks on launch.
+ */
 class URLoaderApp : Application() {
 
     private val appScope = CoroutineScope(Dispatchers.IO + SupervisorJob())

@@ -42,6 +42,10 @@ enum class SupportedPlatform(
     )
 }
 
+/**
+ * Platform detection engine. Resolves domains to their corresponding [SupportedPlatform]
+ * for themed badges, styling, and platform-specific format optimization.
+ */
 object PlatformDetector {
 
     fun detect(url: String?): SupportedPlatform {

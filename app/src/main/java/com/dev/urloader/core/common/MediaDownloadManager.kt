@@ -70,6 +70,15 @@ data class LiveDownloadProgress(
     val isIndeterminate: Boolean
 )
 
+/**
+ * Central download manager and persistence engine.
+ *
+ * Responsibilities:
+ * - Dispatches downloads to [DownloadService].
+ * - Publishes live download progress StateFlow for real-time UI binding.
+ * - Manages verified local download history (max 100 items), backed by persistent storage.
+ * - Performs background disk reconciliation with the `Downloads/URLoader` directory.
+ */
 object MediaDownloadManager {
 
     private val _recentDownloads = MutableStateFlow<List<DownloadRecord>>(emptyList())

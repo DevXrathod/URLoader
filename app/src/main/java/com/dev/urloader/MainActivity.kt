@@ -33,6 +33,13 @@ import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
+/**
+ * Primary dashboard hub providing:
+ * - Direct URL pasting & format selection (Video / Audio only).
+ * - Real-time Live Activity download progress monitoring.
+ * - Download library management with instant FileProvider media launching.
+ * - Engine version management and manual update controls.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

@@ -21,6 +21,11 @@ import com.dev.urloader.core.common.PlatformDetector
 import com.dev.urloader.core.common.UrlExtractor
 import com.dev.urloader.databinding.ActivityShareReceiverBinding
 
+/**
+ * Lightweight floating modal that acts as an Android Direct Share Target.
+ * Receives shared media URLs from external apps (YouTube, Instagram, TikTok, X, Reddit, etc.)
+ * and dispatches background download tasks without pulling the user away from their active app.
+ */
 class ShareReceiverActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityShareReceiverBinding

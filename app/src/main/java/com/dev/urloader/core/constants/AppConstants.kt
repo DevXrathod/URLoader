@@ -1,5 +1,9 @@
 package com.dev.urloader.core.constants
 
+/**
+ * Application-wide compile-time constants: Notification channel IDs, intent extras,
+ * MIME types, timeouts, and yt-dlp format sorting parameters.
+ */
 object AppConstants {
     const val DOWNLOAD_NOTIFICATION_CHANNEL_ID = "urloader_media_downloads"
     const val EXTRA_SHARED_URL = "com.dev.urloader.extra.SHARED_URL"

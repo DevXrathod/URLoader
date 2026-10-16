@@ -35,6 +35,16 @@ import java.io.File
 
 private const val TAG = "DownloadService"
 
+/**
+ * Foreground Service responsible for media stream extraction and downloading via yt-dlp & FFmpeg.
+ *
+ * Key Capabilities:
+ * - Runs as a Foreground Service with FOREGROUND_SERVICE_TYPE_DATA_SYNC (compliant with SDK 34-36).
+ * - Android 16 Live Activity promoted ongoing notification integration.
+ * - Self-healing pipeline: automatically updates yt-dlp nightly and retries upon failure.
+ * - Asynchronous cancellation destroying native process by process ID.
+ * - MediaScanner integration for immediate Android system media store indexing.
+ */
 class DownloadService : Service() {
 
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
